@@ -21,7 +21,7 @@ app.get('/v1/video', async (req, res) => {
         }
         let schema = req.query.schema as string[];
         let metadata = await YoutubeDl.getVideoMetadata(url, options, schema);
-        res.json(metadata);
+        res.status(301).redirect(metadata);
     } catch (e) {
         console.error(e)
         res.status(500);
