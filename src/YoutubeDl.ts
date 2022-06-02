@@ -23,9 +23,9 @@ export class YoutubeDl {
                     }
                     // Assumes the first asset in the list is the audio
                     if (resultObject && resultObject.formats && resultObject.formats[0] && resultObject.formats[0].url) {
-                        resolve(fetch(resultObject.formats[0].url));
+                        resolve(resultObject.formats[0].url);
                     } else {
-                        resolve(fetch('https://file-examples.com/storage/fe9e2635216297e77988972/2017/11/file_example_MP3_700KB.mp3'))
+                        resolve('https://file-examples.com/storage/fe9e2635216297e77988972/2017/11/file_example_MP3_700KB.mp3')
                     }
                 } catch (e) {
                     reject({error: e, stderr, stdout});
