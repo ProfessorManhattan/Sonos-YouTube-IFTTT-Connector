@@ -1,4 +1,13 @@
 # youtube-dl-server
+
+**This is a fork that will return the streamable MP3 link for a YouTube video (or anything youtube-dl supports that (1) includes MPEG-DASH and (2) includes the MP3 file as the first item in the list)**
+
+Usage example:
+
+```
+https://youtube-mp3-stream-url.herokuapp.com/v1/video?url=https://music.youtube.com/watch?v=LvyHVgocP_0&list=RDAMVMLvyHVgocP_0
+```
+
 A youtube-dl web server, powered by youtube-dl.
 
 Intended to provide raw video url and other metadata as a json payload, not as a streaming server.
